@@ -1,0 +1,67 @@
+/*to create variables, use host*/
+:host(){
+    --dark-blue: #1e2235;
+    --light-white: #f7f7f7;
+    --light-blue:#a3bffa;
+    --light-pink: #e19b9c;
+    --size-16:16px;
+    --size-12:12px; 
+    --size-14:14px;
+}
+
+.box{
+    max-width: 420px;
+    text-align: center;
+    margin: auto;
+    color: var(--light-white);
+    background: #15030d;
+    padding: var(--size-16);
+    border-radius: 38px;
+}
+h1{
+    font-size: 40px;
+    padding: 20px 0; /*0 means remove left and right padding, only top n bottom available*/
+    font-weight: bold;
+    color:rgb(195, 101, 34)
+}
+.app{
+   min-height:100vh;
+   background-image: url(/sfsites/c/resource/bmiAppBackground);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.info-wrapper{
+    background: #15030d;
+    padding:16px;
+    border-bottom-left-radius: 38px;/*if i want edges at bottom radius round*/
+    border-bottom-right-radius: 38px;
+    font-size: 14px;
+    text-align: center;
+}
+h2{
+    color: rgb(254, 5, 46);
+    font-size: 25px;
+}
+label{
+    font-size: 20px;
+    color: #e01414ec;
+}
+input{
+    color:#22bcde;
+    padding: 6px;
+    font-size: 14px;
+}
+.custom-button{
+  background:  rgb(97, 165, 234);
+  font-size: var(--size-16);
+  padding: var(--size-12);
+  border-color:  var(--light-pink);
+  color: rgb(90, 21, 181);
+}
+.result-value{
+  color: var(--light-blue);
+  font-size: 30px;
+}
+.no-wrap {
+  white-space: nowrap;
+}
