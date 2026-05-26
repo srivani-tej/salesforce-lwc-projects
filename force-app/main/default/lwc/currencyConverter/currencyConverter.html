@@ -1,0 +1,36 @@
+<template>
+<div class="currency-app">
+<div class="container"> <!--within container, there is card, within form-->
+<div class="slds-card custom-card">
+
+<form onsubmit={submitHandler}>
+    <h1 class="slds-text-heading_large slds-text-color_inverse slds-text-align_center">Currency Converter</h1><br>
+<div class="slds-grid slds-gutters">
+<div class="slds-col">
+<lightning-combobox name="currencyFrom" label="From" value={currencyFrom} placeholder="Select Currency"
+    variant="label-hidden"   options={countryList} onchange={handleChange} ></lightning-combobox>
+</div>
+<div class="slds-grid slds-text-align_center">
+<lightning-icon icon-name='action:change_record_type' alternative-text='convert' size='small' title='convert currency'></lightning-icon>
+</div>
+<div class="slds-col">
+<lightning-combobox name="currencyTo" label="To" value={currencyTo} placeholder="Select Currency"
+    variant="label-hidden"   options={countryList} onchange={handleChange} ></lightning-combobox>
+</div>
+</div><br>
+<lightning-input type="number" name="amount" label="Amount" placeholder="Enter amount to convert" required 
+variant="label-hidden" class="slds-m-vertical_x-medium" onchange={handleChange}></lightning-input>  
+<br>
+<div class="slds-text-align_center">
+    <template lwc:if={result}>
+      <div class="result" style="color: rgb(80, 190, 226);font-size: 20px;"> {amount} {currencyFrom} Is <span class="result-to">{result} {currencyTo}</span> </div>
+    </template>
+    <template lwc:if={error}><div class="result">{error}</div>
+    </template>
+</div>
+<button type="submit" class="slds-button custom-button slds-button_neutral">Convert</button>
+</form> 
+</div>
+</div>
+</div>
+</template>
